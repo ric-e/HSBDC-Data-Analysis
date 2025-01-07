@@ -30,10 +30,10 @@ X1_grid, X2_grid = np.meshgrid(np.linspace(min(X1), max(X1), 10), np.linspace(mi
 Y_grid = model.predict(np.column_stack((X1_grid.ravel(), X2_grid.ravel()))).reshape(X1_grid.shape)
 ax.plot_surface(X1_grid, X2_grid, Y_grid, color='red', alpha=0.5, label='Regression Plane')
 
-ax.set_xlabel('X1')
-ax.set_ylabel('X2')
-ax.set_zlabel('Y')
+ax.set_xlabel('English ACT Scores')
+ax.set_ylabel('Math ACT Scores')
+ax.set_zlabel('% of High Speed Internet Access')
 ax.legend()
-ax.set_title('Multiple Linear Regression in 3D')
+ax.set_title('% of High Speed Internet Access vs ACT Test Scores')
 
 plt.show()
