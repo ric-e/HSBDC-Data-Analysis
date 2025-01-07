@@ -44,7 +44,7 @@ ax.set_zlabel('% of High Internet Access')
 '''
 ax.set_xlabel('English SAT Scores')
 ax.set_ylabel('Math SAT Scores')
-ax.set_zlabel('% of Internet Accessibility Access')
+ax.set_zlabel('% of Internet Usage')
 
 
 ax.legend()
