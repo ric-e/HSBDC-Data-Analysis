@@ -8,10 +8,11 @@ from sklearn.linear_model import LinearRegression
 When running the code, comment everything else except a set each time (pair of X1, X2, Y) and save it accordingly
 Make sure to comment and uncomment the labels that are not being used each time you run it
 '''
-X1 = [583,556,569,582,534,518,529,499,495,516,538,550,505,509,543,622,618,620,610,512,535,559,507,636,628,622,603,628,580,533,544,543,531,554,627,550,490,562,545,503,526,633,618,515,614,560,567,539,483,635,623]
-X2 = [560,541,565,559,531,506,516,486,480,483,519,550,488,504,537,622,623,612,591,502,523,561,496,648,608,614,596,631,576,526,545,530,533,546,636,548,472,550,537,492,504,635,602,507,615,546,551,535,460,648,615]
-Y = [63.16,66.42,71.83,62.71,69.00,75.03,70.68,74.28,79.50,69.70,63.19,77.86,71.92,71.03,67.36,65.80,65.25,58.20,59.70,69.38,78.87,72.01,66.43,72.50,53.91,63.65,64.31,69.81,70.01,79.13,74.32,64.16,69.94,63.14,69.29,67.32,62.64,73.85,68.17,75.84,71.39,70.41,63.21,67.63,75.63,73.07,70.97,68.60,63.68,67.77,60.39]
 
+#USAGE
+X1 = [592,553,596,610,546,508,512,489,495,503,539,565,494,492,489,610,626,616,611,551,515,560,493,601,601,603,607,631,591,526,538,458,522,570,652,525,486,574,547,489,527,605,606,497,621,563,569,549,478,615,604]
+X2 = [570,529,587,582,536,488,495,469,474,463,515,549,476,478,482,598,619,592,583,529,493,551,474,599,583,588,586,621,576,508,528,444,516,557,634,519,468,551,531,468,501,602,585,481,618,536,544,532,445,621,596]
+Y = [78.85,73.56,77.62,75.85,79.01,81.58,76.87,83.49,87.88,74.86,81.69,79.37,86.85,83.10,77.93,77.76,78.02,81.84,75.95,85.87,84.33,79.07,81.22,83.28,75.33,77.21,71.14,74.22,72.34,82.69,81.02,78.61,74.90,69.99,82.93,79.12,80.63,86.88,75.18,79.56,80.84,80.73,73.22,79.72,79.85,76.46,80.04,80.85,77.74,87.88,83.07]
 
 
 
@@ -36,7 +37,7 @@ ax.scatter(X1, X2, Y, color='blue', label='Actual')
 X1_grid, X2_grid = np.meshgrid(np.linspace(min(X1), max(X1), 10), np.linspace(min(X2), max(X2), 10))
 Y_grid = model.predict(np.column_stack((X1_grid.ravel(), X2_grid.ravel()))).reshape(X1_grid.shape)
 ax.plot_surface(X1_grid, X2_grid, Y_grid, color='red', alpha=0.5, label='Regression Plane')
-
+'''
 ax.set_xlabel('English SAT Scores')
 ax.set_ylabel('Math SAT Scores')
 ax.set_zlabel('% of High Internet Access')
@@ -44,10 +45,10 @@ ax.set_zlabel('% of High Internet Access')
 ax.set_xlabel('English SAT Scores')
 ax.set_ylabel('Math SAT Scores')
 ax.set_zlabel('% of Internet Accessibility Access')
-'''
+
 
 ax.legend()
-ax.set_title('% of High Speed Internet Access vs SAT Test Scores')
-#ax.set_title('% of Internet Usage vs SAT Test Scores')
+#ax.set_title('% of High Speed Internet Access vs SAT Test Scores')
+ax.set_title('% of Internet Usage vs SAT Test Scores')
 
 plt.show()
