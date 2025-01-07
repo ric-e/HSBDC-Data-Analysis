@@ -4,7 +4,10 @@ from mpl_toolkits.mplot3d import Axes3D
 from sklearn.linear_model import LinearRegression
 
 # Sample data
-
+'''
+When running the code, comment everything else except a set each time (pair of X1, X2, Y) and save it accordingly
+Make sure to comment and uncomment the labels that are not being used each time you run it
+'''
 #SAT 2023 
 
 #HIGH SPEED
@@ -65,7 +68,14 @@ ax.plot_surface(X1_grid, X2_grid, Y_grid, color='red', alpha=0.5, label='Regress
 ax.set_xlabel('English SAT Scores')
 ax.set_ylabel('Math SAT Scores')
 ax.set_zlabel('% of High Internet Access')
+'''
+ax.set_xlabel('English SAT Scores')
+ax.set_ylabel('Math SAT Scores')
+ax.set_zlabel('% of Internet Accessibility Access')
+'''
+
 ax.legend()
-ax.set_title('% of High Internet Access vs SAT Test Scores')
+ax.set_title('% of High Speed Internet Access vs SAT Test Scores')
+#ax.set_title('% of Internet Usage vs SAT Test Scores')
 
 plt.show()
