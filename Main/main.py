@@ -11,7 +11,7 @@ Make sure to comment and uncomment the labels that are not being used each time 
 '''
 X1 = [544,545,499,500,513,502,508,523,540,526,514,505]
 X2 = [528,527,485,487,480,483,498,508,526,531,497,498]
-Y = [72.31,74.27,75.80,78.85,69.08,73.67,76.23,71.22,81.13,72.35,76.70,66.49]
+Y = [80.10,71.88,75.99,80.68,69.35,85.60,84.28,77.65,81.01,72.36,77.55,71.82]
 
 '''
 #SAT 2023 
@@ -64,7 +64,7 @@ X1_grid, X2_grid = np.meshgrid(np.linspace(min(X1), max(X1), 10), np.linspace(mi
 Y_grid = model.predict(np.column_stack((X1_grid.ravel(), X2_grid.ravel()))).reshape(X1_grid.shape)
 ax.plot_surface(X1_grid, X2_grid, Y_grid, color='red', alpha=0.5, label='Regression Plane')
 
-
+'''
 ax.set_xlabel('English SAT Scores')
 ax.set_ylabel('Math SAT Scores')
 ax.set_zlabel('% of High Internet Access')
@@ -72,10 +72,10 @@ ax.set_zlabel('% of High Internet Access')
 ax.set_xlabel('English SAT Scores')
 ax.set_ylabel('Math SAT Scores')
 ax.set_zlabel('% of Internet Usage')
-'''
+
 
 ax.legend()
-ax.set_title('% of High Speed Internet Access vs SAT Test Scores')
-#ax.set_title('% of Internet Usage vs SAT Test Scores')
+#ax.set_title('% of High Speed Internet Access vs SAT Test Scores')
+ax.set_title('% of Internet Usage vs SAT Test Scores')
 
 plt.show()
