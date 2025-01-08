@@ -9,9 +9,9 @@ from sklearn.linear_model import LinearRegression
 When running the code, comment everything else except a set each time (pair of X1, X2, Y) and save it accordingly
 Make sure to comment and uncomment the labels that are not being used each time you run it
 '''
-X1 = [544,545,499,500,513,502,508,523,540,526,514,505]
-X2 = [528,527,485,487,480,483,498,508,526,531,497,498]
-Y = [80.10,71.88,75.99,80.68,69.35,85.60,84.28,77.65,81.01,72.36,77.55,71.82]
+X1 = [518,529,499,495,516,505,509,512,507,533,503,483]
+X2 = [506,516,486,480,483,488,504,502,496,526,492,460]
+Y = [82.30,73.74,71.48,82.49,70.71,77.46,78.45,74.83,74.97,82.10,78.37,69.16]
 
 '''
 #SAT 2023 
