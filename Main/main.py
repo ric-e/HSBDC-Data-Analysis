@@ -10,7 +10,7 @@ When running the code, comment everything else except a set each time (pair of X
 Make sure to comment and uncomment the labels that are not being used each time you run it
 '''
 X1 = [544,545,499,500,513,502,508,523,540,526,514,505]
-X2 = [528,527,485,487,480,483,498,508,526,531,497]
+X2 = [528,527,485,487,480,483,498,508,526,531,497,498]
 Y = [772.31,74.27,75.80,78.85,69.08,73.67,76.23,71.22,81.13,72.35,76.70,66.49]
 
 '''
