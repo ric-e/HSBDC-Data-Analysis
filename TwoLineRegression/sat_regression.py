@@ -58,9 +58,14 @@ plt.xlim(math.floor(min(Y) / X_LIM_TO_MULT) * X_LIM_TO_MULT, min(100, math.ceil(
 plt.ylim(math.floor(min(X1 + X2) / Y_LIM_TO_MULT) * Y_LIM_TO_MULT, math.ceil(max(X1 + X2) / Y_LIM_TO_MULT) * Y_LIM_TO_MULT)  # % of internet access
 
 # labels
-plt.title(f"% of High Speed Internet Access vs. {YEAR[1]} Section Scores for {min(len(Y), 50)} U.S. states ({YEAR[0]})")
+TITLE = "% of High Speed Internet Access vs. "
+TITLE += f"% of high school students meeting Ontario provincial standards for EQAO ({YEAR[0]})" if YEAR[1] == "EQAO" else f"{YEAR[1]} Section Scores for {min(len(Y), 50)} U.S. states ({YEAR[0]})"
+
+YLABEL = f"% of high school students meeting Ontario provincial standards" if YEAR[1] == "EQAO" else f"Score on Specific {YEAR[1]} Section ({YEAR[0]})"
+
+plt.title(TITLE)
 plt.xlabel("% of High Speed Internet Access")
-plt.ylabel(f"Score on Specific {YEAR[1]} Section ({YEAR[0]})")
+plt.ylabel(YLABEL)
 
 # legend
 math_legend = plt.legend(
